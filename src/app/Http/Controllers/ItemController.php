@@ -22,7 +22,7 @@ class ItemController extends Controller
 
         $products = new LengthAwarePaginator($pageData, $products->count(), $perPage, $page, $options);
 
-        return view('products', compact('products'));
+        return view('index', compact('products'));
     }
 
     public function getdetail()

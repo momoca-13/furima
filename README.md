@@ -45,8 +45,11 @@ php 7.4.9
 Laravel 8.83.8  
 mysql 8.0.26  
 
-## ER図　　
-![alt text](image.png)
+## ER図  
+
+![alt text](image-1.png)  
+
+
 ## URL  
 
 開発環境：http://localhost/  

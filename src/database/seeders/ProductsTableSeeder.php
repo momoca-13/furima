@@ -14,77 +14,115 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
-        [
-            'name' => '腕時計',
-            'price' => '15000',
+        $param = [
             'image' => 'storage/tokei.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => '良好',
+            'name' => '腕時計',
+            'maker' => '',
             'description' => 'スタイリッシュなデザインのメンズ腕時計',
-            'condition' => '良好',     
-        ],
-        [
-            'name' => 'HDD',
-            'price' => '5000',
+            'price' => '15000'    
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/HDD.png',
+            'category_id' => ''
+            'user_id' => '',
+            'condition' => '目立った傷や汚れなし', 
+            'name' => 'HDD',
+            'maker' => '',
             'description' => '高速で信頼性の高いハードディスク',
-            'condition' => '目立った傷や汚れなし', 
-        ],
-        [
-            'name' => '玉ねぎ３束',
-            'price' => '300',
+            'price' => '5000' 
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/tamanegi.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => 'やや傷や汚れあり', 
+            'name' => '玉ねぎ３束',
+            'maker' => '',
             'description' => '新鮮な玉ねぎ3束のセット',
-            'condition' => 'やや傷や汚れあり', 
-        ],
-        [
-            'name' => '革靴',
-            'price' => '4000',
+            'price' => '300'       
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/kutu.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => '状態が悪い', 
+            'name' => '革靴',
+            'maker' => '',
             'description' => 'クラシックなデザインの革靴',
-            'condition' => '状態が悪い', 
-        ],
-        [
-            'name' => 'ノートPC',
-            'price' => '45000',
+            'price' => '4000'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/pc.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => '良好', 
+            'name' => 'ノートPC',
+            'maker' => '',
             'description' => '高性能なノートパソコン',
-            'condition' => '良好', 
-        ],
-        [
-            'name' => 'マイク',
-            'price' => '8000',
+            'price' => '45000'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/maiku.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => '目立った傷や汚れなし',
+            'name' => 'マイク',
+            'maker' => '',
             'description' => '高音質のレコーディング用マイク',
-            'condition' => '目立った傷や汚れなし', 
-        ],
-        [
-            'name' => 'ショルダーバック',
-            'price' => '3500',
+            'price' => '8000'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/bag.png',
-            'description' => 'おしゃれなショルダーバッグ',
+            'category_id' => '',
+            'user_id' => '',
             'condition' => 'やや傷や汚れあり', 
-        ],
-        [
-            'name' => 'タンブラー',
-            'price' => '500',
+            'name' => 'ショルダーバック',
+            'maker' => '',
+            'description' => 'おしゃれなショルダーバッグ',
+            'price' => '3500'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/tanbura.png',
-            'description' => '使いやすいタンブラー',
+            'category_id' => '',
+            'user_id' => '',
             'condition' => '状態が悪い', 
-        ],
-        [
-            'name' => 'コーヒーミル',
-            'price' => '4000',
+            'name' => 'タンブラー',
+            'maker' => '',
+            'description' => '使いやすいタンブラー',
+            'price' => '500'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/coffee.png',
-            'description' => '手動のコーヒーミル',
+            'category_id' => '',
+            'user_id' => '',
             'condition' => '良好', 
-        ],
-        [
-            'name' => 'メイクセット',
-            'price' => '2500',
+            'name' => 'コーヒーミル',
+            'maker' => '',
+            'description' => '手動のコーヒーミル',
+            'price' => '4000'
+        ];
+        DB::table('products')->insert($param);
+        $param = [
             'image' => 'storage/makeup.png',
+            'category_id' => '',
+            'user_id' => '',
+            'condition' => '目立った傷や汚れなし',
+            'name' => 'メイクセット',
+            'maker' => '',
             'description' => '便利なメイクアップセット',
-            'condition' => '目立った傷や汚れなし', 
-        ],
-     ]);
+            'price' => '2500'
+        ];
+        DB::table('products')->insert($param);
     }
 }

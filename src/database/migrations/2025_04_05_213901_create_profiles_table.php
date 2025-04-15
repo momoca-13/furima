@@ -17,7 +17,7 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('name');
-            $table->integer('postcode');
+            $table->string('postcode');
             $table->string('address');
             $table->string('building');
             $table->timestamp('created_at')->useCurrent()->nullable();

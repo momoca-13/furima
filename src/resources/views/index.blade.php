@@ -16,13 +16,23 @@
 
         <div class="search-text"><a href="">なにかお探しですか？</a></div>
 
-        <nav class="header-nav-list">
-            <ul class="header-nav-list">
-                <li class="header-nav-item"><a href="">ログアウト</a></li>
-                <li class="header-nav-item"><a href="">マイページ</a></li>
-                <li class="header-nav-item"><a href="">出品</a></li>
+     
+          <nav>
+            <ul class="header-nav">
+                @if (Auth::check())
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/mypage">マイページ</a>
+              </li>
+              <li class="header-nav__item">
+                <form class="form" action="/logout" method="post">
+                    @csrf
+                  <button class="header-nav__button">ログアウト</button>
+                </form>
+              </li>
+              @endif
             </ul>
-        </nav>
+          </nav>
+        </div>
     </header>
 
     <main>

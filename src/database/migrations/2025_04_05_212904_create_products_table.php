@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->integer('condition');
             $table->string('name');
-            $table->string('maker');
+            $table->string('brand');
             $table->text('description');
             $table->integer('price');
             $table->timestamp('created_at')->useCurrent()->nullable();

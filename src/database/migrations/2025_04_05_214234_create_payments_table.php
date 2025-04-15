@@ -17,10 +17,10 @@ class CreatePaymentsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('product_id')->constrained();
-            $table->string('payment_method');
-            $table->decimal('amount', 10, 2);
-            $table->string('address');
-            $table->string('building');
+            $table->integer('payment_method');
+            $table->string('post_address');
+            $table->string('post_building');
+            $table->string('post_postcode');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

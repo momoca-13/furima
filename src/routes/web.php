@@ -2,7 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
-Route::get('/', [ItemController::class, 'index']);
-Route::get('/item/{item_id}', [ItemController::class, 'detail']);
-Route::get('/login', [ItemController::class, 'login']);
+
+Route::middleware('auth')->group(function () {
+         Route::get('/', [ItemController::class, 'index']);
+     });
+Route::post('/register', [UserController::class, 'register']);
+Route::post('/login', [UserController::class, 'login']);
+Route::get('/mypage', [ProfileController::class, 'index'])->name('profile');
+
+

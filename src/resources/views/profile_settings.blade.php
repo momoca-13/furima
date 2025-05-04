@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プロフィール設定画面_初回ログイン時</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile_settings.css') }}">
 </head>
 

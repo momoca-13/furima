@@ -13,12 +13,20 @@ class Product extends Model
     protected $table = 'products';
 
     protected $fillable = [
-        'name',
-        'price',
+        'user_id',
+        'category_id',
         'image',
-        'description',
         'condition',
+        'name',
+        'brand',
+        'description',
+        'price', 
     ];
+
+    public function categories()
+{
+    return $this->belongsToMany(Category::class, 'category_product', 'product_id', 'category_id');
+}
 
     public $timestamps = true;
 }

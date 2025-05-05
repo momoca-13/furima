@@ -40,7 +40,7 @@
             @foreach ($products as $product)
                 <div class="product-card">
                     <a href="/products/detail/{{$product->id}}" class="product-link">
-                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                     <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                       <div class="detail-content">
                       <p>{{ $product->image }}</p>
                         

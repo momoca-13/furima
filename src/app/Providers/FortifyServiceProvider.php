@@ -46,5 +46,14 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::redirects('login', '/'); 
 
         Fortify::redirects('logout', '/');  
+
+        app()->singleton(RegisterResponse::class, function () {
+            return new class implements RegisterResponse {
+                public function toResponse($request)
+                {
+                    return redirect('/profile_settings');
+                }
+            };
+        });
     }
 }

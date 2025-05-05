@@ -10,22 +10,28 @@
 </head>
 
 <body>
-  <header class="top-header">
-    <div class="top-header__inner">
-      <div class="top-header__logo">
-        <img src="/storage/logo.svg" alt="coachtech">
-      </div>
+<header class="top-header">
+        <div class="top-header__logo">
+            <img src="/storage/logo.svg" alt="coachtech">
+        </div>
 
-      <nav class="header-nav">
-        <form class="logout__form" action="/logout" method="post">
-          @csrf
-          <button class="header-nav__button">ログアウト</button>
-        </form>
-        <a href="/mypage" class="header-nav__button">マイページ</a>
-        <a href="/exhibit" class="header-nav__button">出品</a>
-      </nav>
-    </div>
-  </header>
+        <div class="search-text"><a href="">なにをお探しですか？</a></div>
+          <nav>
+            <ul class="header-nav">
+                @if (Auth::check())
+                <li class="header-nav__item">
+                <form class="form" action="/logout" method="post">
+                    @csrf
+                  <button class="header-nav__button">ログアウト</button>
+                </form>
+                </li>
+                <li class="header-nav__item">
+                <a class="header-nav__link" href="/mypage">マイページ</a>
+              </li>
+                @endif
+            </ul>
+          </nav>
+    </header>
 
     <div class="profile-form__content">
       <div class="profile-form__heading">

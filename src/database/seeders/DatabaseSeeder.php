@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             ProductsTableSeeder::class,
             CategoriesTableSeeder::class,
             Product_categoriesTableSeeder::class,
+            ProfilesTableSeeder::class,
         ]);
     }
 }

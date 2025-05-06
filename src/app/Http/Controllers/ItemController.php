@@ -13,5 +13,12 @@ class ItemController extends Controller
         
         return view('index', compact('products'));
     }
+
+    public function detail($id)
+    {   
+        $products = Product::findOrFail($id);  
+        
+        return view('detail', compact('products'));
+    }
 }
 

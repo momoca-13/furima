@@ -42,7 +42,7 @@
                     <a href="/products/detail/{{$product->id}}" class="product-link">
                      <img src="{{ asset($product->image) }}" alt="{{ $product->name }}">
                       <div class="detail-content">
-                      <p>{{ $product->image }}</p>
+                      <p>{{ $product->name }}</p>
                         
                       </div>
                     </a>

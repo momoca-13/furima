@@ -40,7 +40,7 @@
     <div class="profile__image">
         <div class="plofile__text">画像を選択する</div>
         <input id="image" type="file" name="image">
-        <form class="form" action="/" method="post">
+        <form class="form" action="/" method="get">
      @csrf
     <div class="form__group">
       <div class="form__group-title">
